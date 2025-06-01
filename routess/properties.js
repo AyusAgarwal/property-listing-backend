@@ -22,10 +22,10 @@ router.get('/', async (req, res) => {
 
     // 1. Check Redis cache first
     // const cached = await redis.get(queryKey);
-    if (cached) {
-      console.log('🟢 Serving from Redis');
-      return res.json(JSON.parse(cached));
-    }
+    // if (cached) {
+    //   console.log('🟢 Serving from Redis');
+    //   return res.json(JSON.parse(cached));
+    // }
 
     // 2. Build filters as before
     const {
