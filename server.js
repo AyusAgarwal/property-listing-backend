@@ -16,13 +16,14 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use('/api/properties', propertyRoutes);
+
 // Routes
 app.get('/', (req, res) => {
   res.send('Property Listing API is running.');
 });
 app.use('/api/authh', authRoutes);
 // TODO: Add actual routes for auth, properties, favorites, etc.
+app.use('/api/properties', propertyRoutes);
 app.use('/api/favorites', favoriteRoutes);
 app.use('/api/recommendations', recommendationRoutes);
 
